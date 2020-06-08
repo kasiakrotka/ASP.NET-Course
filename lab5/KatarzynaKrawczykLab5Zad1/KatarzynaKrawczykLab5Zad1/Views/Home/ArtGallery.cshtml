@@ -1,0 +1,26 @@
+﻿@model IEnumerable<KatarzynaKrawczykLab5Zad1.DbContext.Art>
+
+@{
+    ViewBag.Title = "Art Gallery";
+}
+<!-- secja ze stylem z about-->
+<link href="~/StyleSheet/AboutMe.css" rel="stylesheet" />
+<section id="about">
+    <div class="row about-content">
+        <!-- nagłówek z tytułem zakładki-->
+        <div class="row section-intro">
+            <h5 style="font-size:25px; font:bold">Art Gallery</h5>
+        </div>
+        <!-- wstawiwanie kolejnych obrazów z bazy danych na strone -->
+        <section class="row">
+             <div class="row col-xs-12 col-md-12">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-xs-12 col-md-3">
+                            <img class="img-responsive" style="cursor: pointer; margin: 20px 20px 20px 20px" src="@Html.DisplayFor(modelItem => item.Photo)" alt="@Html.DisplayFor(modelItem => item.ArtName)" onclick="location.href='@Url.Action("ArtPresentation", "Home", item)';return false;" />
+                        </div>
+                    }
+               </div>
+        </section>
+    </div>
+ </section>

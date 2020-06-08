@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- część odpowiedzialna za elementy konfiguracyjne -->
+<head>
+    <title></title>
+    <!-- Ustawienie kodowania strony www-->
+	<meta charset="utf-8" />
+    <!-- dołączenie pliku ze stylami-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<!-- część przechowująca informacje -->
+<body>
+<!-- część wyświetlająca reklamę-->
+<div class="advertise">
+    <span id="attention">FREE SHIPPING</span><span class="margin-left-right"> FOR EARCH ORDER ONLY FOR </span><span id="counter"></span>
+</div>
+<!-- nagłówek sklepu-->
+<div id="shop-header">
+    <p class="shop-header-title">BrunoBanani</p>
+</div>
+<section>
+    <!-- część zawierajaca zdjęćie produktu -->
+    <div id="item-photo-section">
+        <img id="item-photo" src="Images/t-shirt.png" alt="merch photo" style="width:auto;">
+    </div>
+    <!-- część zawierajaca opis i dane produktu -->
+    <div id="item-information-section">
+        <header>
+            <!-- tytuł produtku-->
+            <h1 id="item-name"> Official merch from BrunoBanani</h1>
+            <!-- cena produktu -->
+            <span id="item-price">21.99$</span>
+            <span class="margin-left-right" id="item-price-hot">HOT!</span>
+            <span id="item-old-price">29.99$</span>
+            <!-- dodatkowy opis-->
+            <p>Gift yourself with a fantasting piece of clothing. Let your friends be jealous od your new look!</p>
+        </header>
+        <!-- sekcja z wyborem stylu produktu -->
+        <section id="item-style-section" class="margin-top">
+            <h3>STYLE:</h3>
+                <!-- przysik z wyborem stylu produktu w ym wypadku - tshirt -->
+                <div class="style-button" onclick="changeImageToShirt()">
+                    <!-- obrazek stylu-->
+                    <img class="img-responsive" src="Images/t-shirt-icon.png" alt="t-shirt">
+                    <!-- opis stylu -->
+                    <div class="description">
+                        <p>t-shirt</p>
+                    </div>
+                </div>
+                <!-- przysik z wyborem stylu produktu w tym wypadku - bluza-->
+                <div class="style-button" onclick="changeImageToSweatshirt()">
+                    <!-- obrazek stylu-->
+                    <img class="img-responsive" src="Images/sweatshirt-icon.png" alt="sweatshirt">
+                    <!-- opis stylu -->
+                    <div class="description">
+                        <p>sweatshirt</p>
+                    </div>
+                </div>
+        </section>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

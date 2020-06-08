@@ -1,0 +1,14 @@
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\bin\Debug\KatarzynaKrawczykLab3Zad.exe.config
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.csprojResolveAssemblyReference.cache
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.AddMeal.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.Menu.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.Properties.Resources.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.csproj.GenerateResource.Cache
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\bin\Debug\KatarzynaKrawczykLab3Zad.exe
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\bin\Debug\KatarzynaKrawczykLab3Zad.pdb
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.exe
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.pdb
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.WeightCalendar.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.EditDiary.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.WorkoutDiary.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab3\KatarzynaKrawczykLab3Zad\KatarzynaKrawczykLab3Zad\obj\Debug\KatarzynaKrawczykLab3Zad.TotalDiary.resources

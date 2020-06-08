@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentsGradesDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Grade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Album" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstTestPoints" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="SecondTestPoints" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="FinalGrade" Type="Decimal" Precision="1" Scale="1" />
+  </EntityType>
+  <EntityContainer Name="StudentsGradesDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Grades" EntityType="Self.Grade" />
+  </EntityContainer>
+</Schema>

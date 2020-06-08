@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_9B1FC5_cpc20181ModelStoreContainer" CdmEntityContainer="DB_9B1FC5_cpc20181Entities1">
+    <EntitySetMapping Name="KatarzynaKrawczykEntries">
+      <EntityTypeMapping TypeName="DB_9B1FC5_cpc20181Model.KatarzynaKrawczykEntries">
+        <MappingFragment StoreEntitySet="KatarzynaKrawczykEntries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+          <ScalarProperty Name="Definition" ColumnName="Definition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KatarzynaKrawczykImages">
+      <EntityTypeMapping TypeName="DB_9B1FC5_cpc20181Model.KatarzynaKrawczykImages">
+        <MappingFragment StoreEntitySet="KatarzynaKrawczykImages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEntry" ColumnName="IdEntry" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

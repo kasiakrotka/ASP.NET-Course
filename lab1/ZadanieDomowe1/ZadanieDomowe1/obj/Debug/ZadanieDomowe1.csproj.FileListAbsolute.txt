@@ -1,0 +1,20 @@
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\bin\Debug\ZadanieDomowe1.exe.config
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\bin\Debug\ZadanieDomowe1.exe
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\bin\Debug\ZadanieDomowe1.pdb
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.csprojResolveAssemblyReference.cache
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.Form1.resources
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.Form2.resources
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.Properties.Resources.resources
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.csproj.GenerateResource.Cache
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.exe
+C:\Users\frygt\Documents\Visual Studio 2015\Projects\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.pdb
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\bin\Debug\ZadanieDomowe1.exe.config
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.exe
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.pdb
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\bin\Debug\ZadanieDomowe1.exe
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\bin\Debug\ZadanieDomowe1.pdb
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.csprojResolveAssemblyReference.cache
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.Form1.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.Form2.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.Properties.Resources.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab1\ZadanieDomowe1\ZadanieDomowe1\obj\Debug\ZadanieDomowe1.csproj.GenerateResource.Cache

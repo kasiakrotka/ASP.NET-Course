@@ -1,0 +1,76 @@
+﻿@model KatarzynaKrawczykLab8Zad1.Models.KatarzynaKrawczykEntries
+
+@{
+    ViewBag.Title = "Details";
+}
+<!-- powiększanie obraz - do poprawienia wersja z błędami-->
+<div id="myModal" class="modal-hidden">
+    <span class="close">&times;</span>
+    <img id="modal-image" class="modal-content" src="~/Content/Images/lion.jpg" />
+    <div id="caption"></div>
+</div>
+
+<!-- pasek z wyszukiwarką - zawsze zzostaje na górze strony-->
+<div id="navbar" class="navbar_absolute">
+    @using (Html.BeginForm("Index", "KatarzynaKrawczykEntries", FormMethod.Get))
+    {
+        @Html.TextBox("word")<input type="submit" value="Search" />
+    }
+</div>
+<!-- górny pasek na stronie część na logo itp-->
+<div id="banner">
+    <div id="title">
+        Encyklopedia Dzikich Kotów
+    </div>
+</div>
+<!-- część użytkowa strony -->
+<div class="container body-content">
+    <!-- lewy pasek strony-->
+    <div class="left-side">
+        <p class="side-header">Twórzmy razem!</p>
+        <p>
+            @Html.ActionLink("Edytuj to hasło", "Edit", new { id = Model.Id })
+        </p>
+    </div>
+    <!-- środkowy pasek strony - część główna -->
+    <div class="entries-list">
+        <!-- wybrane hasło-->
+        <header class="keyword">
+            @Html.DisplayFor(model => model.Keyword)
+        </header>
+        <!-- definicja hasła-->
+        <p id="definition">
+            @Html.DisplayFor(model => model.Definition)
+        </p>
+        <!-- opis hasła-->
+        <p>
+            @Html.DisplayFor(model => model.Description)
+        </p>
+        <header class="keyword">
+                ilustracje
+        </header>
+        <!-- część na miniaturki ilustracji-->
+        <div id="ilustrations">
+            @foreach (var item in Model.KatarzynaKrawczykImages)
+            {
+                <div id="ilustration-thumbnail">
+                    <img class="ilustration" onclick=enlargeImage() src="@Html.DisplayFor(modelItem => item.Image)"  alt="@Html.DisplayFor(modelItem => item.Description)"/>
+                    <p id="ilustration-description">@Html.DisplayFor(modelItem => item.Description)</p>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- prawy pasek strony -->
+    <div class="right-side">
+        <p class="side-header">
+            Podlej kwiatek!
+        </p>
+    </div>
+</div>
+<p>
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@Scripts.Render("~/Scripts/script.js")
+
+

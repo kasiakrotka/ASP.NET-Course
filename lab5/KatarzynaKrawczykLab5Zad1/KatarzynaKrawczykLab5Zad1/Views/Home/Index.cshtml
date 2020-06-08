@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!-- sekcja z wykorzystaniem stylu z about-->
+<link href="~/StyleSheet/AboutMe.css" rel="stylesheet" />
+<section id="about">
+    <!-- część nagłówkowa-->
+    <div class="page-header text-center">
+        <!-- tytuł i podtytuł-->
+        <div class="section-intro">
+            <h1>Frida Kahlo</h1>
+            <h5 style="font-size:12px">“I don't paint dreams or nightmares, I paint my own reality.”</h5>
+        </div>
+    </div>
+    <!-- część z przyciskami z odnośnikami-->
+    <div class="row text-center">
+        <!-- columna z odnośnikiem do galrii obrazów-->
+        <div class="col-md-4">
+            <img src="~/Content/Images/my_art.jpg" style="margin-bottom: 10px; border-radius:50%" alt="my art" height="350" width="250" />
+            <h2>
+                <button class="button stroke" onclick="location.href='@Url.Action("ArtGallery", "Home")';return false;">Art Gallery</button>
+            </h2>
+            <p>
+                See miracles of my talent.
+            </p>
+        </div>
+        <!-- columna z odnośnikiem do sklepu-->
+        <div class="col-md-4">
+            <img src="~/Content/Images/my_merch.jpg" style="margin-bottom: 10px; border-radius:50%" alt="my art" height="350" width="250" />
+            <h2>
+                <button class="button stroke" onclick="location.href='@Url.Action("Shop", "Home")';return false;">Shop</button>
+            </h2>
+            <p>
+                Buy a gift for yourself.
+            </p>
+        </div>
+        <!-- columna z odnośnikiem do about me-->
+        <div class="col-md-4">
+            <img src="~/Content/Images/my_face.jpg" style="margin-bottom: 10px; border-radius:50%" alt="my art" height="350" width="250" />
+            <h2>
+                <button class="button stroke" onclick="location.href='@Url.Action("AboutMe", "Home")';return false;">About Me</button>
+            </h2>
+            <p>
+                Know better how wonderfull person I am
+            </p>
+        </div>
+    </div>
+</section>

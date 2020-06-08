@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StudentsGradesDbModelStoreContainer" CdmEntityContainer="StudentsGradesDbEntities">
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="StudentsGradesDbModel.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Album" ColumnName="Album" />
+          <ScalarProperty Name="FirstTestPoints" ColumnName="FirstTestPoints" />
+          <ScalarProperty Name="SecondTestPoints" ColumnName="SecondTestPoints" />
+          <ScalarProperty Name="FinalGrade" ColumnName="FinalGrade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

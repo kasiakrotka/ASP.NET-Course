@@ -1,0 +1,65 @@
+﻿@model IEnumerable<KatarzynaKrawczykLab6Zad1.Models.GradeModel>
+
+@{
+    ViewBag.Title = "Results";
+}
+
+<h2>Resutls</h2>
+<!-- przenoszenie do utworzenia nowego zestawu ocen-->
+<p>
+    @Html.ActionLink("Dodaj nwy zestaw ocen", "Create")
+</p>
+<!--- wyszukiwarka -->
+@using (Html.BeginForm())
+{
+    <p>
+        Wyszukaj przez nr albumu: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+<!-- tablica z zestawami-->
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Album)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstTestPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondTestPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalGrade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Album)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstTestPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondTestPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinalGrade)
+        </td>
+        <!-- odnośniki do edytuj i usun-->
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+    <tr>
+        <td>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </td>
+    </tr>
+
+</table>

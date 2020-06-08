@@ -1,0 +1,19 @@
+﻿@model KatarzynaKrawczykLab5Zad1.DbContext.Art
+
+@{
+    ViewBag.Title = "ArtPresentation";
+}
+<!-- wykorzystany stylesheet-->
+<link href="~/StyleSheet/AboutMe.css" rel="stylesheet" />
+<!-- wykorzystanie stylu sekcji z about-->
+<section id="about">
+    <!-- div z całą zawratością prezentowanego obrazu -->
+    <div class="text-center section-intro">
+        <!-- nazwa obrazu -->
+        <h1>@Model.ArtName</h1>
+        <!-- opis obrazu -->
+        <p class="lead">@Model.ArtDescription</p>
+        <!--- obraz -->
+        <img src="@Model.Photo" alt="No Photo"/>
+    </div>
+</section>

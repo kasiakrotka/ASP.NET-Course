@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EncyclopedyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KatarzynaKrawczykEntries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Definition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KatarzynaKrawczykEntriesRelations" Relationship="Self.FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries" FromRole="KatarzynaKrawczykEntries" ToRole="KatarzynaKrawczykEntriesRelations" />
+    <NavigationProperty Name="KatarzynaKrawczykImages" Relationship="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" FromRole="KatarzynaKrawczykEntries" ToRole="KatarzynaKrawczykImages" />
+  </EntityType>
+  <EntityType Name="KatarzynaKrawczykEntriesRelations">
+    <Key>
+      <PropertyRef Name="IdEntry" />
+      <PropertyRef Name="IdRelatedEntry" />
+    </Key>
+    <Property Name="IdEntry" Type="Int32" Nullable="false" />
+    <Property Name="IdRelatedEntry" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="KatarzynaKrawczykEntries" Relationship="Self.FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries" FromRole="KatarzynaKrawczykEntriesRelations" ToRole="KatarzynaKrawczykEntries" />
+  </EntityType>
+  <EntityType Name="KatarzynaKrawczykImages">
+    <Key>
+      <PropertyRef Name="IdEntry" />
+      <PropertyRef Name="Image" />
+    </Key>
+    <Property Name="IdEntry" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="KatarzynaKrawczykEntries" Relationship="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" FromRole="KatarzynaKrawczykImages" ToRole="KatarzynaKrawczykEntries" />
+  </EntityType>
+  <Association Name="FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries">
+    <End Role="KatarzynaKrawczykEntries" Type="Self.KatarzynaKrawczykEntries" Multiplicity="1" />
+    <End Role="KatarzynaKrawczykEntriesRelations" Type="Self.KatarzynaKrawczykEntriesRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KatarzynaKrawczykEntries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KatarzynaKrawczykEntriesRelations">
+        <PropertyRef Name="IdEntry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+    <End Role="KatarzynaKrawczykEntries" Type="Self.KatarzynaKrawczykEntries" Multiplicity="1" />
+    <End Role="KatarzynaKrawczykImages" Type="Self.KatarzynaKrawczykImages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KatarzynaKrawczykEntries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KatarzynaKrawczykImages">
+        <PropertyRef Name="IdEntry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_9B1FC5_cpc20181Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KatarzynaKrawczykEntries" EntityType="Self.KatarzynaKrawczykEntries" />
+    <EntitySet Name="KatarzynaKrawczykEntriesRelations" EntityType="Self.KatarzynaKrawczykEntriesRelations" />
+    <EntitySet Name="KatarzynaKrawczykImages" EntityType="Self.KatarzynaKrawczykImages" />
+    <AssociationSet Name="FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries" Association="Self.FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries">
+      <End Role="KatarzynaKrawczykEntries" EntitySet="KatarzynaKrawczykEntries" />
+      <End Role="KatarzynaKrawczykEntriesRelations" EntitySet="KatarzynaKrawczykEntriesRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" Association="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+      <End Role="KatarzynaKrawczykEntries" EntitySet="KatarzynaKrawczykEntries" />
+      <End Role="KatarzynaKrawczykImages" EntitySet="KatarzynaKrawczykImages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

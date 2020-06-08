@@ -1,0 +1,156 @@
+﻿body {
+    margin-left:10%;
+    margin-right: 10%;
+    font-family:Verdana, Geneva, sans-serif;
+}
+p
+{
+    font-size:14px;
+    font-style: normal;
+    font-family: Verdana, Geneva, sans-serif;
+}
+h1
+{
+    font-size:26px;
+    font-style: normal;
+    font-family: Verdana, Geneva, sans-serif;
+}
+h3
+{
+    font-size:16px;
+    font-style: normal;
+    font-family: Verdana, Geneva, sans-serif;
+}
+span
+{
+    font-size:14px;
+    font-style: normal;
+    font-family: Verdana, Geneva, sans-serif;
+}
+/*właściwości sekcji ze zdjęciem produktu*/
+#item-photo-section
+{
+    width: 50%;
+    float:left;
+}
+/*właściwości zdjęcia produktu*/
+#item-photo
+{
+    max-width:100%;
+    max-height:100%;
+}
+/* ustawa margines po obu stronach */
+.margin-left-right
+{
+    margin-left:10px;
+    margin-right:10px;
+}
+/* ustawia margines u góry*/
+.margin-top
+{
+    margin-top: 50px;
+}
+/*właściwości sekcji z informacjami o produkcie*/
+#item-information-section
+{
+    text-align:left;
+    width: 45%;
+    float:right;
+}
+/*właściwości nagłówka strony*/
+#shop-header
+{
+    border-bottom:solid;
+    border-bottom-color:dimgray;
+    text-align:center;
+    height:100px;
+    margin-bottom:20px;
+}
+/*właśćiwości aktualnej ceny produktu*/
+#item-price
+{
+    margin-right:10px;
+    font-size:20px;
+    font-style: normal;
+    font-family: Verdana, Geneva, sans-serif;
+}
+/*właściwości starej ceny produktu*/
+#item-old-price
+{
+    margin-right:10px;
+    font-size:16px;
+    font-style: normal;
+    font-family: Verdana, Geneva, sans-serif;
+    text-decoration: line-through;
+    color: grey;
+}
+/* właściwości dospiku do ziany ceny*/
+#item-price-hot
+{
+    margin-right:10px;
+    font-size:20px;
+    font-style: normal;
+    font-family: Verdana, Geneva, sans-serif;
+}
+/*właściwości klasy tytułu w nagłówku sklepu*/
+.shop-header-title 
+{
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+/* właściwości ramki z reklamą */
+div.advertise
+{
+    height:100px;
+    line-height: 100px;
+    width:auto;
+    background-color:#FFB6C1;
+    text-align:center;
+}
+/*właściwości tekstu w okienku reklamy*/
+div.advertise span
+{
+    color:white;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;   
+    font-size: 20px;
+    font-style: normal;
+    font-weight:bold;
+}
+/* właściwości obiektu z opcją stylu*/
+div.style-button
+{
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    float: left;
+    width: 100px;
+    height:120px;
+    text-align:center;
+    overflow:hidden;
+}
+/* zmiana koloru obramowania obiektu z opcją stylu */
+div.style-button:hover
+{
+     border: 1px solid #777;
+     border-radius: 15px;
+     cursor:pointer;
+}
+/* włąściwości obrazka w obiekcie z opcją stylu */
+div.style-button img 
+{
+    width: auto;
+    height: auto;
+    margin-top:5px;
+    float:none;
+    
+}
+/* właściwości klasy opisu*/
+.description
+{
+    font-size: 14px;
+    font-family: Verdana, Geneva, sans-serif;
+}

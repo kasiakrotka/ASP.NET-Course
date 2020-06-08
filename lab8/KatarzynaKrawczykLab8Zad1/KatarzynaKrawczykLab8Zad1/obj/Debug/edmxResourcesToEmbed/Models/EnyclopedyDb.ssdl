@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EncyclopedyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="KatarzynaKrawczykEntries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Keyword" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Definition" Type="text" Nullable="false" />
+    <Property Name="Description" Type="text" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_9B1FC5_cpc20181.dbo.KatarzynaKrawczykEntriesRelations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KatarzynaKrawczykEntriesRelations">
+    <Key>
+      <PropertyRef Name="IdEntry" />
+      <PropertyRef Name="IdRelatedEntry" />
+    </Key>
+    <Property Name="IdEntry" Type="int" Nullable="false" />
+    <Property Name="IdRelatedEntry" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_9B1FC5_cpc20181.dbo.KatarzynaKrawczykImages' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KatarzynaKrawczykImages">
+    <Key>
+      <PropertyRef Name="IdEntry" />
+      <PropertyRef Name="Image" />
+    </Key>
+    <Property Name="IdEntry" Type="int" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries">
+    <End Role="KatarzynaKrawczykEntries" Type="Self.KatarzynaKrawczykEntries" Multiplicity="1" />
+    <End Role="KatarzynaKrawczykEntriesRelations" Type="Self.KatarzynaKrawczykEntriesRelations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KatarzynaKrawczykEntries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KatarzynaKrawczykEntriesRelations">
+        <PropertyRef Name="IdEntry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+    <End Role="KatarzynaKrawczykEntries" Type="Self.KatarzynaKrawczykEntries" Multiplicity="1" />
+    <End Role="KatarzynaKrawczykImages" Type="Self.KatarzynaKrawczykImages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KatarzynaKrawczykEntries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="KatarzynaKrawczykImages">
+        <PropertyRef Name="IdEntry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EncyclopedyModelStoreContainer">
+    <EntitySet Name="KatarzynaKrawczykEntries" EntityType="Self.KatarzynaKrawczykEntries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KatarzynaKrawczykEntriesRelations" EntityType="Self.KatarzynaKrawczykEntriesRelations" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KatarzynaKrawczykEntriesRelations].[IdEntry] AS [IdEntry], 
+    [KatarzynaKrawczykEntriesRelations].[IdRelatedEntry] AS [IdRelatedEntry]
+    FROM [dbo].[KatarzynaKrawczykEntriesRelations] AS [KatarzynaKrawczykEntriesRelations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="KatarzynaKrawczykImages" EntityType="Self.KatarzynaKrawczykImages" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KatarzynaKrawczykImages].[IdEntry] AS [IdEntry], 
+    [KatarzynaKrawczykImages].[Image] AS [Image]
+    FROM [dbo].[KatarzynaKrawczykImages] AS [KatarzynaKrawczykImages]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries" Association="Self.FK_KatarzynaKrawczykEntriesRelations_KatarzynaKrawczykEntries">
+      <End Role="KatarzynaKrawczykEntries" EntitySet="KatarzynaKrawczykEntries" />
+      <End Role="KatarzynaKrawczykEntriesRelations" EntitySet="KatarzynaKrawczykEntriesRelations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" Association="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+      <End Role="KatarzynaKrawczykEntries" EntitySet="KatarzynaKrawczykEntries" />
+      <End Role="KatarzynaKrawczykImages" EntitySet="KatarzynaKrawczykImages" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

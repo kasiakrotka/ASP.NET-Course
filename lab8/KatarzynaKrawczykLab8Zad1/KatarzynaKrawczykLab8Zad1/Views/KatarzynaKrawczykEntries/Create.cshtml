@@ -1,0 +1,81 @@
+﻿@model KatarzynaKrawczykLab8Zad1.Models.KatarzynaKrawczykEntries
+
+@{
+    ViewBag.Title = "Create";
+}
+<div id="navbar" class="navbar_absolute">
+    @using (Html.BeginForm("Index", "KatarzynaKrawczykEntries", FormMethod.Get))
+    {
+        @Html.TextBox("word")<input class="search-bar" type="submit" value="Search" />
+    }
+</div>
+<div id="banner">
+    <div id="title">
+        <img id="banner-image" src="~/Content/Images/logoIcon.png" />
+        Encyklopedia Dzikich Kotów
+    </div>
+</div>
+
+<div class="container body-content">
+
+    <div class="left-side">
+        <p class="side-header">Twórzmy razem!</p>
+        <p>
+            @Html.ActionLink("Zacznij od początku", "Create")
+        </p>
+    </div>
+    <div class="entries-list">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>KatarzynaKrawczykEntries</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Keyword, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Keyword, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Keyword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Definition, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Definition, new { cols = 35, @rows = 3, })
+                        @Html.ValidationMessageFor(model => model.Definition, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, new { cols = 35, @rows = 3, })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="right-side">
+        <p class="side-header">
+            Podlej kwiatek!
+        </p>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

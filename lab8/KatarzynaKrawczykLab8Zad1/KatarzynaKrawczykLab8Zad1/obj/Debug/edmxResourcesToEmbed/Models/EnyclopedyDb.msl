@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EncyclopedyModelStoreContainer" CdmEntityContainer="DB_9B1FC5_cpc20181Entities">
+    <EntitySetMapping Name="KatarzynaKrawczykEntries">
+      <EntityTypeMapping TypeName="EncyclopedyModel.KatarzynaKrawczykEntries">
+        <MappingFragment StoreEntitySet="KatarzynaKrawczykEntries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+          <ScalarProperty Name="Definition" ColumnName="Definition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KatarzynaKrawczykEntriesRelations">
+      <EntityTypeMapping TypeName="EncyclopedyModel.KatarzynaKrawczykEntriesRelations">
+        <MappingFragment StoreEntitySet="KatarzynaKrawczykEntriesRelations">
+          <ScalarProperty Name="IdEntry" ColumnName="IdEntry" />
+          <ScalarProperty Name="IdRelatedEntry" ColumnName="IdRelatedEntry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KatarzynaKrawczykImages">
+      <EntityTypeMapping TypeName="EncyclopedyModel.KatarzynaKrawczykImages">
+        <MappingFragment StoreEntitySet="KatarzynaKrawczykImages">
+          <ScalarProperty Name="IdEntry" ColumnName="IdEntry" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

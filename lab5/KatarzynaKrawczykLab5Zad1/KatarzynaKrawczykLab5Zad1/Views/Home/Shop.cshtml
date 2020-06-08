@@ -1,0 +1,44 @@
+﻿@model IEnumerable<KatarzynaKrawczykLab5Zad1.DbContext.Product>
+
+@{
+    ViewBag.Title = "Shop";
+}
+<!-- sekcja z wykorzystaniem stylu z about-->
+<link href="~/StyleSheet/AboutMe.css" rel="stylesheet" />
+<section id="about">
+    <!-- część nagłówkowa-->
+    <div class="row section-intro">
+        <h5 style="font-size:25px; font:bold">Shop</h5>
+    </div>
+    <!-- sekcja z produkami-->
+        <section class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="row">
+                    <!-- wstawianie kolejno produktów na strone z bazy danych-->
+                    @foreach (var product in Model)
+                    {
+                        <div class="col-xs-12 col-md-3">
+                            <div class="thumbnail">
+                                <!-- zdjęcie produktu-->
+                                <img class="img-responsive" src="@(product.Photo)">
+                                <div class="caption text-center">
+                                    <!-- nazwa produktu-->
+                                    <p>
+                                        <span>@product.Name</span>
+                                    </p>
+                                    <!--- cena produktu-->
+                                    <p>
+                                        <b>Price:</b> <span>@product.Price $</span>
+                                    </p>
+                                    <!-- przycisk przenoszący do PaymentForm-->
+                                    <p class="button stroke">
+                                        @Html.ActionLink("Buy", "PaymentForm", "Home", product)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                     }
+                </div>
+            </div>
+        </section>
+</section>

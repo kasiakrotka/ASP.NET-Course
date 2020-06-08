@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_9B1FC5_cpc20181Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="KatarzynaKrawczykEntries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Keyword" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Definition" Type="text" Nullable="false" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="KatarzynaKrawczykImages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="IdEntry" Type="int" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+          <End Role="KatarzynaKrawczykEntries" Type="Self.KatarzynaKrawczykEntries" Multiplicity="1" />
+          <End Role="KatarzynaKrawczykImages" Type="Self.KatarzynaKrawczykImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KatarzynaKrawczykEntries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KatarzynaKrawczykImages">
+              <PropertyRef Name="IdEntry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9B1FC5_cpc20181ModelStoreContainer">
+          <EntitySet Name="KatarzynaKrawczykEntries" EntityType="Self.KatarzynaKrawczykEntries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KatarzynaKrawczykImages" EntityType="Self.KatarzynaKrawczykImages" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" Association="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+            <End Role="KatarzynaKrawczykEntries" EntitySet="KatarzynaKrawczykEntries" />
+            <End Role="KatarzynaKrawczykImages" EntitySet="KatarzynaKrawczykImages" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_9B1FC5_cpc20181Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KatarzynaKrawczykEntries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Keyword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Definition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="KatarzynaKrawczykImages" Relationship="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" FromRole="KatarzynaKrawczykEntries" ToRole="KatarzynaKrawczykImages" />
+        </EntityType>
+        <EntityType Name="KatarzynaKrawczykImages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="IdEntry" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="KatarzynaKrawczykEntries" Relationship="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" FromRole="KatarzynaKrawczykImages" ToRole="KatarzynaKrawczykEntries" />
+        </EntityType>
+        <Association Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+          <End Role="KatarzynaKrawczykEntries" Type="Self.KatarzynaKrawczykEntries" Multiplicity="1" />
+          <End Role="KatarzynaKrawczykImages" Type="Self.KatarzynaKrawczykImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KatarzynaKrawczykEntries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="KatarzynaKrawczykImages">
+              <PropertyRef Name="IdEntry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9B1FC5_cpc20181Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KatarzynaKrawczykEntries" EntityType="Self.KatarzynaKrawczykEntries" />
+          <EntitySet Name="KatarzynaKrawczykImages" EntityType="Self.KatarzynaKrawczykImages" />
+          <AssociationSet Name="FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries" Association="Self.FK_KatarzynaKrawczykImages_KatarzynaKrawczykEntries">
+            <End Role="KatarzynaKrawczykEntries" EntitySet="KatarzynaKrawczykEntries" />
+            <End Role="KatarzynaKrawczykImages" EntitySet="KatarzynaKrawczykImages" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_9B1FC5_cpc20181ModelStoreContainer" CdmEntityContainer="DB_9B1FC5_cpc20181Entities1">
+          <EntitySetMapping Name="KatarzynaKrawczykEntries">
+            <EntityTypeMapping TypeName="DB_9B1FC5_cpc20181Model.KatarzynaKrawczykEntries">
+              <MappingFragment StoreEntitySet="KatarzynaKrawczykEntries">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Definition" ColumnName="Definition" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KatarzynaKrawczykImages">
+            <EntityTypeMapping TypeName="DB_9B1FC5_cpc20181Model.KatarzynaKrawczykImages">
+              <MappingFragment StoreEntitySet="KatarzynaKrawczykImages">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdEntry" ColumnName="IdEntry" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

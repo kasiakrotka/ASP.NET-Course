@@ -1,0 +1,10 @@
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\bin\Debug\KatarzynaKrawczykLab2ZadDom.exe.config
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\obj\Debug\KatarzynaKrawczykLab2ZadDom.csprojResolveAssemblyReference.cache
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\obj\Debug\KatarzynaKrawczykLab2ZadDom.Properties.Resources.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\obj\Debug\KatarzynaKrawczykLab2ZadDom.csproj.GenerateResource.Cache
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\bin\Debug\KatarzynaKrawczykLab2ZadDom.exe
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\bin\Debug\KatarzynaKrawczykLab2ZadDom.pdb
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\obj\Debug\KatarzynaKrawczykLab2ZadDom.StartWindow.resources
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\obj\Debug\KatarzynaKrawczykLab2ZadDom.exe
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\obj\Debug\KatarzynaKrawczykLab2ZadDom.pdb
+C:\Users\frygt\Desktop\Kredek\katarzyna_krawczyk\lab2\KatarzynaKrawczykLab2ZadDom\KatarzynaKrawczykLab2ZadDom\obj\Debug\KatarzynaKrawczykLab2ZadDom.GameWindow.resources
